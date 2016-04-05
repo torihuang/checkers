@@ -1,3 +1,11 @@
+before '/users/:id' do
+  redirect '/' unless logged_in? && params[:id].to_i == current_user.id
+end
+
+before '/users' do
+  redirect '/session/new' unless logged_in?
+end
+
 get '/users/new' do
   erb :'users/_new', layout: false
 end
