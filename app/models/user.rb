@@ -16,6 +16,17 @@ class User < ActiveRecord::Base
     self.encrypted_password = @password
   end
 
+  def self.authenticate(args)
+    username = args[:username]
+    password_input = args[:password]
+    user = User.find_by(username: username)
+    if user && self.password = password_input
+      user
+    else
+      return nil
+    end
+  end
+
   private
   def validate_password(password_input)
     errors.add(:password, "must be 6 characters in length") unless password_input.length >= 6

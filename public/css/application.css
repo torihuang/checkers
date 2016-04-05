@@ -46,6 +46,7 @@ form label {
   overflow: auto;
   border-radius: 10px;
   background-color: rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 .intro-logo {
@@ -74,4 +75,10 @@ form label {
   background-color: #ccac00;
   cursor: pointer;
   box-shadow: 0 0 10px white;
+}
+
+.error {
+  color: white;
+  text-align: center;
+  font-size: 16px;
 }

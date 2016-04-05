@@ -34,4 +34,22 @@ $(document).ready(function(){
       }
     })
   })
+
+  $('#nav-button-container').on('submit','#new-session-form',function(e){
+    e.preventDefault();
+    data = $(this).serialize();
+    $.ajax({
+      method: "POST",
+      url: '/session',
+      data: data
+    })
+    .done(function(response){
+      console.log(response);
+    })
+    .fail(function(jsxhr){
+      if ($('#new-session-form').has('#errors').length == 0) {
+        $('#new-session-form').append(jsxhr.responseText);
+      }
+    })
+  });
 });
