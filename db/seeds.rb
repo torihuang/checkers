@@ -1,5 +1,5 @@
 10.times do
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Superhero.power, email: Faker::Internet.email, birthday: Faker::Date.between_except(90.year.ago, 1.year.ago, Date.today))
+  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Superhero.power, email: Faker::Internet.email, birthday: Faker::Date.between_except(90.year.ago, 1.year.ago, Date.today), password: "password1")
 end
 
 5.times do

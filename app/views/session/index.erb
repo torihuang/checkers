@@ -1,10 +1,13 @@
-<h1>Welcome to Memory Palace</h1>
-<% if logged_in %>
-  <h2>We're happy to see you <%= current_user.first_name %>!</h2>
-  <div id='enter' class='nav-button'>Enter</div>
-  <div id='logout' class='nav-button'>Logout</div>
+<h1 class='intro-logo'>Welcome to Memory Palace</h1>
+<% if logged_in? %>
+  <h2 class='intro-logo'>We're happy to see you <%= current_user.first_name %>!</h2>
+  <section id='nav-button-container'>
+    <div id='enter' class='nav-button'><a href='/users/<%= current_user.id %>'>Enter</a></div>
+    <div id='logout' class='nav-button'>Logout</div>
 <% else %>
-  <div id='login' class='nav-button'>Login</div>
-  <div id='signup' class='nav-button'>Sign Up</div>
-  <div id='learn' class='nav-button'>Learn More</div>
+  <section id='nav-button-container'>
+    <div id='login' class='nav-button'>Login</div>
+    <div id='signup' class='nav-button'>Sign Up</div>
 <% end %>
+  </section>
+  <div id='learn'>Learn More</div>
