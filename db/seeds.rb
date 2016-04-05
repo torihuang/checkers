@@ -7,7 +7,7 @@ end
 end
 
 30.times do
-  Object.create(name: Faker::Hipster.word, image_path: Faker::Avatar.image)
+  Item.create(name: Faker::Hipster.word, image_path: Faker::Avatar.image)
 end
 
 50.times do
@@ -20,6 +20,6 @@ end
 prng = Random.new
 100.times do
   random_room = Room.all.to_a.sample
-  random_object = Object.all.to_a.sample
-  Placement.create(room: random_room, master: random_master, object: random_object, object_location_x: prng.rand(1000), object_location_y: prng.rand(1000))
+  random_item = Item.all.to_a.sample
+  Placement.create(room: random_room, item: random_item, item_location_x: prng.rand(1000), item_location_y: prng.rand(1000))
 end
