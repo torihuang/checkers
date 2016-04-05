@@ -4,6 +4,7 @@ class CreatePalaces < ActiveRecord::Migration
       t.string  :name
       t.integer :creator_id
       t.integer :room_id
+      t.integer :master_id
 
       t.timestamps(null: false)
     end
