@@ -3,7 +3,7 @@
 end
 
 5.times do
-  Room.create(name: Faker::Hipster.word, image_path: Faker::Avatar.image)
+  Room.create(name: Faker::Hipster.word, image_path: "/imgs/room-1.png")
 end
 
 30.times do

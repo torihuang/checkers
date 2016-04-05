@@ -13,10 +13,18 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
   <script src="/js/application.js" type="text/javascript"></script>
+  <script src="/js/room.js" type="text/javascript"></script>
 
   <title>Memory Palace</title>
 </head>
 <body>
+  <nav>
+    <a href='/' id='logo'>Memory Palace</a>
+    <% if logged_in? %>
+      <a href='/'><%= current_user.username %></a>
+    <% end %>
+    <a id='hamburger'>=</a>
+  </nav>
   <div class="content">
   <%= yield %>
   </div>
