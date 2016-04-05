@@ -71,6 +71,14 @@ form label {
   box-shadow: 0 0 10px white;
 }
 
+#nav-button-container a {
+  color: white;
+}
+
+#nav-button-container a:hover {
+  text-decoration: none;
+}
+
 #learn:hover {
   background-color: #ccac00;
   cursor: pointer;

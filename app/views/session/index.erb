@@ -2,7 +2,7 @@
 <% if logged_in? %>
   <h2 class='intro-logo'>We're happy to see you <%= current_user.first_name %>!</h2>
   <section id='nav-button-container'>
-    <div id='enter' class='nav-button'>Enter</div>
+    <div id='enter' class='nav-button'><a href='/users/<%= current_user.id %>'>Enter</a></div>
     <div id='logout' class='nav-button'>Logout</div>
 <% else %>
   <section id='nav-button-container'>

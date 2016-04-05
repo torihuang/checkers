@@ -35,6 +35,17 @@ $(document).ready(function(){
     })
   })
 
+  $('body').on('click','#logout',function(e){
+    e.preventDefault();
+    $.ajax({
+      method: "DELETE",
+      url: '/session'
+    })
+    .done(function(response) {
+      window.location.href = "/"
+    })
+  })
+
   $('#nav-button-container').on('submit','#new-session-form',function(e){
     e.preventDefault();
     data = $(this).serialize();
@@ -44,11 +55,30 @@ $(document).ready(function(){
       data: data
     })
     .done(function(response){
-      console.log(response);
+      window.location.href = "/users/" + response.user_id;
     })
     .fail(function(jsxhr){
       if ($('#new-session-form').has('#errors').length == 0) {
         $('#new-session-form').append(jsxhr.responseText);
+      }
+    })
+  });
+
+  $('#nav-button-container').on('submit','#new-user-form',function(e){
+    e.preventDefault();
+    data = $(this).serialize();
+    $.ajax({
+      method: "POST",
+      url: '/users',
+      data: data
+    })
+    .done(function(response){
+      console.log(response);
+      window.location.href = "/users/" + response.user_id;
+    })
+    .fail(function(jsxhr){
+      if ($('#new-user-form').has('#errors').length == 0) {
+        $('#new-user-form').append(jsxhr.responseText);
       }
     })
   });
