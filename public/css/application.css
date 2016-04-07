@@ -5,13 +5,19 @@
 }
 
 body {
-  background-image: url('/imgs/backdrop.jpg');
+  /*background-image: url('/imgs/backdrop.jpg');*/
+  background-color: white;
   background-repeat: no-repeat;
-  color: white;
+  color: #222222;
 }
 
+/*.content{
+  display: none;
+  background-color: #222222;
+}*/
+
 form {
-  color: black;
+  color: #222222;
 }
 
 form input, label {
@@ -37,6 +43,7 @@ form label {
   display: block;
   font-size: 30px;
   border-radius: 10px;
+  color: white;
 }
 
 #nav-button-container {
@@ -52,6 +59,7 @@ form label {
 .intro-logo {
   margin-top: 15%;
   text-align: center;
+  color: white;
 }
 
 #learn {
@@ -63,6 +71,7 @@ form label {
   font-size: 20px;
   border-radius: 10px;
   padding: 10px;
+  color: white;
 }
 
 .nav-button:hover {
@@ -89,4 +98,79 @@ form label {
   color: white;
   text-align: center;
   font-size: 16px;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #222222;
+  padding-top: 10px;
+}
+
+nav a {
+  font-size: 20px;
+  color: white;
+  margin: 10px 20px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#hamburger {
+  float: right;
+  /*margin-top: 10px;*/
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+#mini-room-container {
+  width: 800px;
+  margin: 20px auto;
+  border: 2px solid white;
+}
+
+.mini-room {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  overflow: auto;
+  background-color: #222222;
+  color: white;
+}
+
+.mini-room a {
+  color: white;
+}
+
+.mini-room img {
+  width: 125px;
+}
+
+#palace-show {
+  width: 1001px;
+  margin: auto auto;
+  position: relative;
+  /*border: 1px solid black;*/
+}
+
+.room-image {
+  padding-top: 0px;
+  width: 1000px;
+  margin: auto auto;
+  margin-top: 100px;
+  /*position: relative;*/
+}
+
+.content {
+  padding: 0px;
+}
+
+.item-image {
+  position: absolute;
 }

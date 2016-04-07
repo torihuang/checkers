@@ -1,1 +1,5 @@
-<h2>Dashboard</h2>
+<div id='mini-room-container'>
+<% current_user.rooms.each do |room| %>
+  <%= erb :'rooms/_mini', layout: false, locals: {room: room} %>
+<% end %>
+</div>

@@ -1,4 +1,10 @@
 $(document).ready(function(){
+
+  if (window.location.pathname == '/') {
+    $('nav').toggle();
+    $('body').css('background-image', 'url(/imgs/backdrop.jpg)');
+  }
+
   $('body').on('click','#login',function(e){
     e.preventDefault();
     $.ajax({
@@ -34,6 +40,11 @@ $(document).ready(function(){
       }
     })
   })
+
+  // $('body').on('click','#enter',function(e){
+  //   $('body').css('background-image', 'none');
+  //   $('body').css('background-color', '#222222');
+  // })
 
   $('body').on('click','#logout',function(e){
     e.preventDefault();
